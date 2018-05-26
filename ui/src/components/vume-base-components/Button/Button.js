@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Button.css';
 
-const VumeButtom = (props) => (
-    <button>
-        {text}
-    </button>
+const VumeButton = (props) => (
+    <div className={`vume-button ${props.styling ? props.styling : ''}`}>
+        <div className="vume-button__icon "></div>
+        <div className="vume-button__text">{props.text}</div>
+    </div>
 );
 
-VumeButtom.propTypes = {
-    text: PropTypes.string.isRequired
+VumeButton.propTypes = {
+    icon: PropTypes.func,
+    text: PropTypes.string.isRequired,
+    styling: PropTypes.string,
 };
 
-export default VumeButtom;
+export default VumeButton;
