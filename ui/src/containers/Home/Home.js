@@ -40,7 +40,7 @@ class HomeContainer extends React.Component {
                     </div>
                     <div className="div-block">
                         <InputField text={this.state.inputValue} onChange={this.onChange} placeholder={'Enter the Code'} autoFocus={true}/>
-                        <Link to={`/shroom/${123}`}>
+                        <Link to={!this.state.activeButton ? '' : `/shroom/${123}`}>
                             <Button text={'Join'} styling={'primary'} disabled={!this.state.activeButton}/>
                         </Link>
                         <div>or</div>

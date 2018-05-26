@@ -18,8 +18,6 @@ const ShroomCreator = (props) => (
                     <div className="vume__presentation-input__icon tertiary">+</div>
                     <div className="vume__quadratic-button__text">Upload PDF</div>
                 </div>
-                <Button text={'Generate Key'} styling={'secondary'} disabled={true}/>
-                <Button text={'Start Slideshow'} styling={'tertiary'} disabled={true}/>
             </div>
         </div>
     </div>
