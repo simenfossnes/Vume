@@ -6,6 +6,7 @@ import './InputField.css';
 const InputField = (props) => (
     <input
         type="text"
+        placeholder={props.placeholder}
         className="vume-input"
         value={props.text}
         onChange={props.onChange}
@@ -16,6 +17,7 @@ const InputField = (props) => (
 InputField.propTypes = {
     text: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
+    placeholder: PropTypes.string,
     autoFocus: PropTypes.bool,
 };
 

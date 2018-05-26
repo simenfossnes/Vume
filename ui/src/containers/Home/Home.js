@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import debounce from 'lodash.debounce';
 
 import logo from '../../logo.svg'
 import './Home.css';
@@ -10,12 +11,23 @@ import InputField from '../../components/vume-base-components/InputField/index';
 class HomeContainer extends React.Component {
 
     state = {
-        inputValue: ''
+        inputValue: '',
+        activeButton: false
     };
 
     onChange = (event) => {
-        console.log(event.target.value);
-        this.setState({inputValue: event.target.value});
+        const input = event.target.value;
+        this.setState({inputValue: input});
+        debounce((input) => this.checkInput(input), 500)(input);
+    };
+
+    checkInput = (input) => {
+        console.log(input);
+        if (input !== "123") {
+            this.setState({activeButton: false});
+            return;
+        }
+        this.setState({activeButton: true});
     };
 
     render() {
@@ -27,9 +39,9 @@ class HomeContainer extends React.Component {
                         <div className="tagline">everything, everytime for everyone</div>
                     </div>
                     <div className="div-block">
-                        <InputField text={this.state.inputValue} onChange={this.onChange} autoFocus={true}/>
+                        <InputField text={this.state.inputValue} onChange={this.onChange} placeholder={'Enter the Code'} autoFocus={true}/>
                         <Link to={`/shroom/${123}`}>
-                            <Button text={'Join'} styling={'primary'}/>
+                            <Button text={'Join'} styling={'primary'} disabled={!this.state.activeButton}/>
                         </Link>
                         <div>or</div>
                         <Link to={`/shroomcreator`}>

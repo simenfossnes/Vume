@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import './PresenterShroom.css';
 
 import CommentCard from '../vume-base-components/CommentCard';
+import CommentSection from '../vume-base-components/CommentSection'
 
 const PresenterShroom = (props) => (
     <div className="presenter-shroom">
         <div className="presenter-shroom__main"></div>
         <div className="presenter-shroom__right">
-            <div className="comment-section">
+            <CommentSection>
                 <CommentCard text={'hey ho here we go sweet'}/>
-            </div>
+            </CommentSection>
         </div>
         <div className="presenter-shroom__bottom">
             <div className="presenter-shroom__bottom__top">
