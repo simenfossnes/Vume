@@ -1,9 +1,11 @@
+import ShroomCreator from './ShroomCreator';
+import ShroomJoiner from './ShroomJoiner';
 import PresenterShroom from './PresenterShroom';
 import ViewerShroom from './ViewerShroom';
-import ShroomCreator from './ShroomCreator'
 
 export {
+    ShroomCreator,
+    ShroomJoiner,
     PresenterShroom,
     ViewerShroom,
-    ShroomCreator
 };

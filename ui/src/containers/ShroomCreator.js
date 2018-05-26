@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ShroomCreator } from '../components/Shroom';
 
-class PresenterShroomContainer extends React.Component {
+class ShroomCreatorContainer extends React.Component {
     render() {
         return (
             <ShroomCreator/>
@@ -10,4 +10,4 @@ class PresenterShroomContainer extends React.Component {
     }
 }
 
-export default PresenterShroomContainer;
+export default ShroomCreatorContainer;

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
 import logo from '../../logo.svg'
 import './Home.css';
 
@@ -13,8 +15,12 @@ class Home extends React.Component {
                 <img src={logo} className="logo" alt="logo" />
                 <div className="tagline">everything, everytime for everyone</div>
                 <div className="div-block">
-                    <Button text={'Join'} styling={'primary'}/>
-                    <Button text={'Present'} styling={'secondary'}/>
+                    <Link to={`/shroomjoiner`}>
+                        <Button text={'Join'} styling={'primary'}/>
+                    </Link>
+                    <Link to={`/shroomcreator`}>
+                        <Button text={'Present'} styling={'secondary'}/>
+                    </Link>
                 </div>
             </div>
         );
