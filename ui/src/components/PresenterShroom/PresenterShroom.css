@@ -104,56 +104,8 @@
     width: 100%;
 }
 
-.reaction-input {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-}
-
-.reaction-input__button {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-
-.reaction-input__button.primary {
-    background-color: #0f9;
-}
-
-.reaction-input__button.secondary {
-    background-color: #ffd900;
-}
-
-.reaction-input__button.tertiary {
-    background-color: #e74900;
-}
-
-.reaction-input__button.quaternary {
-    background-color: #00d0bb;
-}
-
 .comment-section {
     height: 100%;
-}
-
-.reaction-input__button__icon {
-    font-size: 58px;
-    line-height: 58px;
 }
 
 .presenter-shroom__bottom__top {
