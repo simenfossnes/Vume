@@ -2,20 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './PresenterShroom.css';
 
+import CommentCard from '../vume-base-components/CommentCard';
+
 const PresenterShroom = (props) => (
     <div className="presenter-shroom">
         <div className="presenter-shroom__main"></div>
         <div className="presenter-shroom__right">
             <div className="comment-section">
-                <div className="comment-card">
-                    <div className="comment-card__text">This is some text inside of a div block. ariose ntaories
-                        ntoiearn stoienarsoi tenaroies ntoairen stoiaerns otienars.
-                    </div>
-                    <div className="div-block-5">
-                        <div className="comment-card__timestamp">15 secs ago</div>
-                        <div className="comment-card__score">4 votes</div>
-                    </div>
-                </div>
+                <CommentCard text={'hey ho here we go sweet'}/>
             </div>
         </div>
         <div className="presenter-shroom__bottom">
