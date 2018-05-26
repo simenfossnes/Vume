@@ -1,0 +1,85 @@
+.shroom-creator {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.div-block-2 {
+    width: 34%;
+    margin-right: 33%;
+    margin-left: 33%;
+}
+
+.div-block-3 {
+    width: 100%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.vume-quadratic-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.vume__presentation-input__icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 72px;
+    height: 72px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 72px;
+    line-height: 72px;
+}
+
+.vume__presentation-input__icon.primary {
+    background-color: #0f9;
+}
+
+.vume__presentation-input__icon.secondary {
+    background-color: #00d0bb;
+}
+
+.vume__presentation-input__icon.tertiary {
+    background-color: #e5c206;
+}
+
+.vume__quadratic-button__text {
+    padding: 1rem;
+}

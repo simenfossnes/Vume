@@ -3,8 +3,8 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 300px;
-    margin: 10px;
+    width: 80%;
+    margin: 1rem;
     padding: 1rem;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -17,8 +17,8 @@
     background-color: #fff;
     -webkit-transition: -webkit-transform 500ms ease;
     transition: -webkit-transform 500ms ease;
-    transition: transform 500ms ease;
-    transition: transform 500ms ease, -webkit-transform 500ms ease;
+    transition: transform 500 msease;
+    transition: transform 500ms ease, -webkit-transform500ms ease;
     color: #000037;
     font-size: 16px;
     font-weight: 600;
@@ -27,17 +27,19 @@
     cursor: pointer;
 }
 
-.vume-button__icon {
-    display: none;
-    margin-right: 20px;
-}
-
-.vume-button__text {  }
-
 .vume-button:hover {
     -webkit-transform: scale(1.07);
     -ms-transform: scale(1.07);
     transform: scale(1.07);
+}
+
+.vume-button.join {
+    background-color: #00e58f;
+}
+
+.vume-button.present {
+    width: 25%;
+    background-color: #00bbae;
 }
 
 .vume-button.primary {
@@ -48,3 +50,21 @@
     background-color: #00d0bb;
 }
 
+.vume-button.disabled {
+    opacity: 0.33;
+    cursor: not-allowed;
+}
+
+.vume-button.disabled:hover {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+.vume-button.tertiary {
+    background-color: #e5c206;
+}
+
+.vume-button.quaternary {
+    background-color: #e74900;
+}

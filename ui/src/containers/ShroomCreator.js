@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ShroomCreator } from '../components/Shroom';
+import ShroomCreator from '../components/ShroomCreator';
 
 class ShroomCreatorContainer extends React.Component {
     render() {
