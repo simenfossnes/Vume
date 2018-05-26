@@ -9,57 +9,6 @@
     height: 100vh;
 }
 
-.vume-input {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 80%;
-    margin: 1rem;
-    padding: 1rem;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #fff;
-    -webkit-transition: -webkit-transform 500ms ease;
-    transition: -webkit-transform 500 msease;
-    transition: transform 500ms ease;
-    transition: transform500ms ease, -webkit-transform 500ms ease;
-    color: #000037;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.vume-input:hover {
-    -webkit-transform: scale(1.07);
-    -ms-transform: scale(1.07);
-    transform: scale(1.07);
-}
-
-.vume-input.join {
-    background-color: #00e58f;
-}
-
-.vume-input.present {
-    width: 25%;
-    background-color: #00bbae;
-}
-
-.vume-input.primary {
-    background-color: #0f9;
-}
-
-.vume-input.secondary {
-    background-color: #00d0bb;
-}
-
 .presenter-shroom__main {
     position: fixed;
     left: 0px;

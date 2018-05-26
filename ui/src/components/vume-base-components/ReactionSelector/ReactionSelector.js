@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 
 import './ReactionSelector.css';
 
-const timestampToNow = (timestamp) => {
-    // convert the timestamp to new seconds
-};
-
 const ReactionSelector = (props) => (
     <div className="reaction-input">
         <div className="reaction-input__button primary">
