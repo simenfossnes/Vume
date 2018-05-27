@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import logo from '../../logo.svg'
 import './ShroomCreator.css';
 
-import Button from '../vume-base-components/Button';
+import QuadraticButton from "../vume-base-components/QuadraticButton/QuadraticButton";
 
 const ShroomCreator = (props) => (
     <div className="shroom-creator">
@@ -14,15 +13,10 @@ const ShroomCreator = (props) => (
                 <div className="tagline">everything, everytime for everyone</div>
             </div>
             <div className="div-block">
-                <div className="vume-quadratic-button primary">
-                    <div className="vume__presentation-input__icon tertiary">+</div>
-                    <div className="vume__quadratic-button__text">Upload PDF</div>
-                </div>
+                <QuadraticButton text={'Upload PDF'} icon={'+'} onClick={() => {}}/>
             </div>
         </div>
     </div>
 );
-
-ShroomCreator.propTypes = {};
 
 export default ShroomCreator;

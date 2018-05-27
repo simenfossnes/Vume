@@ -4,6 +4,7 @@ import './PresenterShroom.css';
 
 import CommentCard from '../vume-base-components/CommentCard';
 import CommentSection from '../vume-base-components/CommentSection'
+import Timer from "../vume-base-components/Timer/Timer";
 
 const PresenterShroom = (props) => (
     <div className="presenter-shroom">
@@ -15,9 +16,7 @@ const PresenterShroom = (props) => (
         </div>
         <div className="presenter-shroom__bottom">
             <div className="presenter-shroom__bottom__top">
-                <div className="vume-timer">
-                    <div>00:03:21</div>
-                </div>
+                <Timer/>
             </div>
             <div className="presenter-shroom__bottom__bottom">
                 <div className="vume-button secondary">
