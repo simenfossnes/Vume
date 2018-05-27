@@ -8,6 +8,10 @@ export default {
         comments: {
             byId: {},
             allIds: [],
+        },
+        reactions: {
+            byId: {},
+            allIds: []
         }
     },
     scenes: {
