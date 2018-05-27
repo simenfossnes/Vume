@@ -3,9 +3,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 
 import Home from './containers/Home/Home.js';
-import ShroomCreator from './containers/ShroomCreator.js';
-import PresenterShroom from './containers/PresenterShroom.js';
-import ViewerShroom from './containers/ViewerShroom.js'
+import ShroomCreator from './containers/ShroomCreator/ShroomCreator.js';
+import PresenterShroom from './containers/PresenterShroom/PresenterShroom.js';
+import ViewerShroom from './containers/ViewerShroom/ViewerShroom.js'
 
 class App extends Component {
   render() {

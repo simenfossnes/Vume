@@ -30,6 +30,14 @@ class HomeContainer extends React.Component {
         this.setState({activeButton: true});
     };
 
+    onJoinClick = () => {
+        this.props.history.push(`/shroom/${this.state.inputValue}`);
+    };
+
+    onCreateClick = () => {
+        this.props.history.push(`/shroomcreator`);
+    };
+
     render() {
         return (
             <div className="home">
@@ -40,13 +48,9 @@ class HomeContainer extends React.Component {
                     </div>
                     <div className="div-block">
                         <InputField text={this.state.inputValue} onChange={this.onChange} placeholder={'Enter the Code'} autoFocus={true}/>
-                        <Link to={!this.state.activeButton ? '' : `/shroom/${123}`}>
-                            <Button text={'Join'} styling={'primary'} disabled={!this.state.activeButton}/>
-                        </Link>
+                        <Button text={'Join'} styling={'primary'} disabled={!this.state.activeButton} onClick={this.state.activeButton ? this.onJoinClick : null}/>
                         <div>or</div>
-                        <Link to={`/shroomcreator`}>
-                            <Button text={'Create'} styling={'secondary'}/>
-                        </Link>
+                        <Button text={'Create'} styling={'secondary'} onClick={this.onCreateClick}/>
                     </div>
                 </div>
             </div>

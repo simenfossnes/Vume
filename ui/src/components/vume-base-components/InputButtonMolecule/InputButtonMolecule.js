@@ -15,17 +15,16 @@ class InputButtonMolecule extends React.Component {
     onTextChange = (event) => {
         const input = event.target.value;
         this.setState({text: input});
+        console.log(this.state.text);
     };
 
     render() {
         return (
             <div className="input-button-molecule">
                 <InputField text={this.state.text} onChange={this.onTextChange} placeholder={this.props.inputPlaceholder}/>
-                <div className="vume-button quaternary">
-                    <div className="vume-button__icon">🌍</div>
-                    <div className="vume-button__text">Ask</div>
-                </div>
-                <Button text={this.props.buttonText} onClick={() => this.props.onSubmit(this.state.text)}/>
+                <Button text={this.props.buttonText}
+                        styling={this.props.buttonStyling}
+                        onClick={() => this.props.onSubmit(this.state.text)}/>
             </div>
         );
     }
@@ -34,9 +33,12 @@ class InputButtonMolecule extends React.Component {
 InputButtonMolecule.propTypes = {
     inputPlaceholder: PropTypes.string,
     buttonText: PropTypes.string.isRequired,
+    buttonStyling: PropTypes.string,
     onSubmit: PropTypes.func,
 };
 
-InputButtonMolecule.defaultProps = {};
+InputButtonMolecule.defaultProps = {
+    buttonStyling: '',
+};
 
 export default InputButtonMolecule;
