@@ -7,3 +7,4 @@ const databaseRef = firebase.database().ref();
 export const shroomsRef = databaseRef.child("shrooms");
 export const commentsRef = databaseRef.child("comments");
 export const reactionsRef = databaseRef.child("reactions");
+export const storageRef = firebase.storage().ref();
