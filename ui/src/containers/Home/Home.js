@@ -22,7 +22,6 @@ class HomeContainer extends React.Component {
     };
 
     checkInput = (input) => {
-        console.log(input);
         if (input !== "123") {
             this.setState({activeButton: false});
             return;

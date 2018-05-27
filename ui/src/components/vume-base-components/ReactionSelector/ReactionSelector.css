@@ -24,6 +24,7 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    cursor: pointer;
 }
 
 .reaction-input__button.primary {

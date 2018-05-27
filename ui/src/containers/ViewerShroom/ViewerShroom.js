@@ -20,7 +20,12 @@ class ViewerShroomContainer extends React.Component {
                 </div>
                 <div className="viewer-shroom__bottom">
                     <div className="viewer-shroom__bottom__top">
-                        <ReactionSelector/>
+                        <ReactionSelector
+                            happyHandler={() => console.log('happy')}
+                            sadHandler={() => console.log('sad')}
+                            surprisedHandler={() => console.log('surprised')}
+                            shockedHandler={() => console.log('shocked')}
+                        />
                     </div>
                     <div className="viewer-shroom__bottom__bottom">
                         <InputButtonMolecule inputPlaceholder={'Post a Question'} buttonText={'Ask'} buttonStyling={'quaternary'} onSubmit={(comment) => console.log(comment)}/>

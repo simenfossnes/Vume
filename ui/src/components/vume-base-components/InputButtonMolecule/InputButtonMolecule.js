@@ -15,7 +15,11 @@ class InputButtonMolecule extends React.Component {
     onTextChange = (event) => {
         const input = event.target.value;
         this.setState({text: input});
-        console.log(this.state.text);
+    };
+
+    onSubmit = () => {
+        this.props.onSubmit(this.state.text);
+        this.setState({text: ''})
     };
 
     render() {
@@ -24,7 +28,9 @@ class InputButtonMolecule extends React.Component {
                 <InputField text={this.state.text} onChange={this.onTextChange} placeholder={this.props.inputPlaceholder}/>
                 <Button text={this.props.buttonText}
                         styling={this.props.buttonStyling}
-                        onClick={() => this.props.onSubmit(this.state.text)}/>
+                        onClick={this.onSubmit}
+                        style={{width: '33%'}}
+                />
             </div>
         );
     }

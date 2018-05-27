@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 const VumeButton = (props) => (
-    <div className={`vume-button ${props.styling} ${props.disabled ? 'disabled' : ''}`} onClick={props.onClick}>
+    <div className={`vume-button ${props.styling} ${props.disabled ? 'disabled' : ''}`} onClick={props.onClick} style={props.style}>
         <div className="vume-button__icon "></div>
         <div className="vume-button__text">{props.text}</div>
     </div>
