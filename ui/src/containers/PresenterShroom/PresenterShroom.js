@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
 import './PresenterShroom.css';
@@ -32,4 +34,8 @@ class PresenterShroomContainer extends React.Component {
     }
 }
 
-export default PresenterShroomContainer;
+const mapStateToProps = (state, ownProps) => ({});
+
+const mapDispatchToProps = (dispatch) => (bindActionCreators({}, dispatch));
+
+export default connect(mapStateToProps, mapDispatchToProps)(PresenterShroomContainer);

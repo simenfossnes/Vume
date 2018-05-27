@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
+import { upVoteComment } from "../../actions/entities/commentActions";
 import './ViewerShroom.css';
 
 import CommentCard from '../../components/vume-base-components/CommentCard';
@@ -15,7 +18,7 @@ class ViewerShroomContainer extends React.Component {
                 <div className="viewer-shroom__main"></div>
                 <div className="viewer-shroom__right">
                     <CommentSection>
-                        <CommentCard text={'hey ho here we go sweet'}/>
+                        <CommentCard text={'hey ho here we go sweet'} score={4} timestamp={Date.now()} handleUpvote={() => this.props.upVoteComment('123')}/>
                     </CommentSection>
                 </div>
                 <div className="viewer-shroom__bottom">
@@ -36,4 +39,10 @@ class ViewerShroomContainer extends React.Component {
     }
 }
 
-export default ViewerShroomContainer;
+const mapStateToProps = (state, ownProps) => ({});
+
+const mapDispatchToProps = (dispatch) => (bindActionCreators({
+    upVoteComment
+}, dispatch));
+
+export default connect(mapStateToProps, mapDispatchToProps)(ViewerShroomContainer);

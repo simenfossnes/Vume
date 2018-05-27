@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import logo from '../../logo.svg'
 import './ShroomCreator.css';
@@ -84,4 +86,8 @@ class ShroomCreatorContainer extends React.Component {
     }
 }
 
-export default ShroomCreatorContainer;
+const mapStateToProps = (state, ownProps) => ({});
+
+const mapDispatchToProps = (dispatch) => (bindActionCreators({}, dispatch));
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShroomCreatorContainer);

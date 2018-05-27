@@ -6,7 +6,7 @@ export const addComment = (comment) =>  ({
     timestamp: Date.now()
 });
 
-export const upvoteComment = (commentId) => ({
-    type: types.UPVOTE_COMMENT,
+export const upVoteComment = (commentId) => ({
+    type: types.UP_VOTE_COMMENT,
     commentId
 });

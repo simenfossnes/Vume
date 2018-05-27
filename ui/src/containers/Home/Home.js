@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import debounce from 'lodash.debounce';
 
 import logo from '../../logo.svg'
@@ -57,4 +58,8 @@ class HomeContainer extends React.Component {
     }
 }
 
-export default HomeContainer;
+const mapStateToProps = (state, ownProps) => ({});
+
+const mapDispatchToProps = (dispatch) => (bindActionCreators({}, dispatch));
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);

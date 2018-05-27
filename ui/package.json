@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^5.0.4",
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
