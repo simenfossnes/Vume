@@ -11,7 +11,9 @@ import CommentCard from '../../components/vume-base-components/CommentCard';
 import ReactionSelector from '../../components/vume-base-components/ReactionSelector';
 import InputButtonMolecule from "../../components/vume-base-components/InputButtonMolecule";
 import CommentSection from "../../components/vume-base-components/CommentSection";
-import Carousel from 'nuka-carousel';
+import Carousel from 'nuka-carousel'
+
+var shortid = require('shortid');
 
 class ViewerShroomContainer extends React.Component {
 
@@ -28,6 +30,20 @@ class ViewerShroomContainer extends React.Component {
             this.setState({shrooms: snap.val()});
         });
     }
+
+    postComment = (comment) => {
+        const currentShroomId = this.props.match.params.shroomId;
+        const commentId = shortid.generate();
+        const postData = {
+            id: commentId,
+            score: 0,
+            text: comment,
+            shroomId: currentShroomId,
+        };
+        let updates = {};
+        updates[`/${commentId}`] = postData;
+        commentsRef.update(updates);
+    };
 
     render() {
         const { shroomId } = this.props.match.params;
@@ -57,7 +73,7 @@ class ViewerShroomContainer extends React.Component {
                         />
                     </div>
                     <div className="viewer-shroom__bottom__bottom">
-                        <InputButtonMolecule inputPlaceholder={'Post a Question'} buttonText={'Ask'} buttonStyling={'quaternary'} onSubmit={(comment) => console.log(comment)}/>
+                        <InputButtonMolecule inputPlaceholder={'Post a Question'} buttonText={'Ask'} buttonStyling={'quaternary'} onSubmit={this.postComment}/>
                     </div>
                 </div>
             </div>
